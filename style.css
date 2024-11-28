@@ -1,0 +1,1017 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Variáveis de cores */
+:root {
+    --primary: #fbc306;
+    --secondary: #ffffff;
+    --background: #000000;
+    --light-gray: #f4f4f4;
+}
+
+/* Container padrão */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background: var(--background);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+
+.menu li a {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+
+
+.menu li a {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: var(--primary);
+}
+
+.btn {
+    background: var(--primary);
+    color: var(--background);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* Hero Section */
+/* Hero Section com Imagem de Fundo */
+.pulsating-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-shadow: 0 0 10px #f4a261, 0 0 20px #e76f51, 0 0 30px #e9c46a;
+    animation: pulse 1.5s infinite;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.slogan {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--secondary);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Efeito de pulsação */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px #f4a261, 0 0 20px #e76f51, 0 0 30px #e9c46a;
+    }
+
+    50% {
+        transform: scale(1.2);
+        text-shadow: 0 0 20px #f4a261, 0 0 30px #e76f51, 0 0 40px #e9c46a;
+    }
+}
+
+/* Coluna de imagens */
+
+
+.img-background {
+    background-image: url('/images/background.pngjpg');
+    /* Substitua 'sua-imagem.jpg' pelo caminho da imagem */
+    background-size: cover;
+    /* Garante que a imagem cobre todo o container */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem */
+    width: 100%;
+    height: 100vh;
+    /* Altura da tela inteira */
+    display: flex;
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Texto mais visível sobre o fundo */
+
+}
+
+/* Hero Section enriquecido */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Linha decorativa */
+.decorative-line {
+    width: 60%;
+    height: 2px;
+    background: var(--primary);
+    margin: 20px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Diferenciais */
+.differentials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.differential {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.differential:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.differential h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.differential p {
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+/* Botão de Call to Action */
+.btn-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--background);
+    background: var(--primary);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-cta:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+
+/* Seção da logo */
+.logo-section {
+    width: 100%;
+    height: 50vh;
+    /* Outra metade da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    /* Fundo preto */
+}
+
+.logo-image {
+    max-width: 80%;
+    /* Ajusta o tamanho da imagem */
+    height: auto;
+}
+
+
+/* Variáveis de cores */
+:root {
+    --primary: #fbc306;
+    --secondary: #ffffff;
+    --background: #000000;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Animação Global */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilo Geral da Seção de Serviços */
+/* Estilo Geral da Seção de Serviços */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título da seção */
+.services h2 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+/* Lista de serviços */
+.service-list {
+    display: flex;
+    flex-direction: column;
+    /* Colocar tudo em uma coluna */
+    gap: 30px;
+    /* Espaçamento entre os serviços */
+    align-items: center;
+    /* Alinha os itens no centro */
+    padding: 0 20px;
+}
+
+/* Estilo de cada item de serviço */
+/* Estilo Geral da Seção de Serviços */
+/* Estilo Geral da Seção de Serviços */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título da seção */
+.services h2 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+/* Lista de serviços */
+.service-list {
+    display: flex;
+    flex-direction: column;
+    /* Colocar tudo em uma coluna */
+    gap: 30px;
+    /* Espaçamento entre os serviços */
+    align-items: center;
+    /* Alinha os itens no centro */
+    padding: 0 20px;
+}
+
+/* Estilo de cada item de serviço */
+.service {
+    background: rgba(255, 255, 255, 0.1);
+    /* Fundo escuro com transparência */
+    color: var(--background);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+    /* Sombra mais intensa */
+    width: 100%;
+    max-width: 700px;
+    /* Tamanho máximo para cada serviço */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transform: translateY(60px);
+    /* Começando deslocado para baixo */
+    animation: fadeInUp 1.2s ease-out forwards;
+    /* Animação de entrada */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Definir a animação para os serviços */
+.service:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.service:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+/* Efeito de hover nos serviços */
+.service:hover {
+    transform: translateY(-10px);
+    /* Levanta o serviço ao passar o mouse */
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.5);
+    /* Sombra mais intensa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Títulos dos serviços */
+.service h3 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: fadeInLeft 1s ease-in-out;
+    transition: transform 0.3s ease;
+    /* Adiciona transição ao título */
+    cursor: pointer;
+}
+
+/* Efeito de hover no título (move para cima) */
+.service:hover h3 {
+    transform: translateY(-5px);
+    /* Move o título para cima quando o mouse passar por cima */
+}
+
+/* Descrição dos serviços */
+.service p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+    animation: fadeInRight 1s ease-in-out;
+    transition: opacity 0.3s ease;
+    /* Adiciona transição de opacidade à descrição */
+}
+
+/* Efeito de hover na descrição (aumenta a opacidade) */
+.service:hover p {
+    opacity: 0.8;
+    /* Torna a descrição mais destacada quando o mouse passa por cima */
+}
+
+/* Botões dentro de cada serviço */
+.service .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: var(--background);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    opacity: 0;
+    /* Inicialmente invisível */
+    animation: fadeInUp 1.2s ease-in-out forwards;
+    /* Animação do botão */
+    animation-delay: 0.8s;
+    /* Atraso para o botão */
+}
+
+/* Efeito de hover no botão */
+.service .btn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    transform: scale(1.3);
+    /* O botão aumenta de tamanho */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra leve no botão */
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efeito de transição suave nos serviços */
+@media (max-width: 768px) {
+    .service-list {
+        padding: 0 10px;
+    }
+
+    .services h2 {
+        font-size: 2.5rem;
+    }
+
+    .service {
+        padding: 30px;
+    }
+}
+
+/* Depoimentos */
+/* Depoimentos - Seção */
+.testimonials {
+    padding: 50px 20px;
+    background: var(--background);
+    color: var(--secondary);
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.testimonial-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+}
+
+.testimonial {
+    scroll-snap-align: start;
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 0 0 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Estilo Geral */
+.faq {
+    padding: 50px 20px;
+    background: var(--background, #222);
+    /* Fundo escuro */
+    color: var(--secondary, #ccc);
+    /* Texto claro */
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    color: var(--primary, #fbc306);
+    /* Título em amarelo */
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #111;
+    /* Fundo da pergunta */
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    /* Fundo mais claro ao passar o mouse */
+    transform: scale(1.02);
+}
+
+/* Cabeçalho da Pergunta */
+.faq-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-item-header h3 {
+    color: #fbc306;
+    /* Cor do texto da pergunta */
+    font-size: 1.2rem;
+    margin: 0;
+    /* Remove margens */
+}
+
+/* Ícone de Seta */
+.faq-icon {
+    font-size: 2.6rem;
+    color: #fbc306;
+    /* Cor do ícone */
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(90deg);
+    /* Gira a seta ao abrir */
+}
+
+/* Resposta Oculta */
+.faq-answer {
+    max-height: 0;
+    /* Oculta a resposta inicialmente */
+    overflow: hidden;
+    opacity: 0;
+    color: #fff;
+    /* Texto branco */
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    padding-top: 0;
+    /* Remove espaço antes da resposta */
+}
+
+/* Resposta Visível */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    /* Ajuste conforme necessário */
+    opacity: 1;
+    padding-top: 10px;
+    /* Espaço entre a pergunta e a resposta */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Formulário */
+.contact {
+    padding: 50px 20px;
+    background: var(--background);
+    color: var(--secondary);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    background: #f4f4f4;
+    color: #000;
+}
+
+button[type="submit"] {
+    background: var(--primary);
+    color: var(--background);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--background);
+    border-top: 2px solid var(--primary);
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+.testimonial-box {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.faq-item {
+    cursor: pointer;
+    padding: 10px;
+    background: #111;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.faq-item h3 {
+    color: #fbc306;
+}
+
+.faq-answer {
+    display: none;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item:hover {
+    background: #222;
+}
+
+/* Botão de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite;
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+/* Contêiner de redes sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.contact {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    color: #444;
+}
+
+
+/* Estilo dos ícones */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* Ícones (font-awesome ou similar) */
+.social-icon i {
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Animação ao passar o mouse */
+.social-icon:hover {
+    transform: scale(1.2);
+    background-color: #25d366;
+    /* Cor WhatsApp por padrão */
+}
+
+.social-icon:hover i {
+    color: white;
+}
+
+/* Estilo personalizado por rede social */
+.social-icon.facebook:hover {
+    background-color: #3b5998;
+}
+
+.social-icon.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.social-icon.twitter:hover {
+    background-color: #1da1f2;
+}
+
+
+/* Ícone do WhatsApp */
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+    }
+}
+
+/* Efeito de hover */
+.whatsapp-button:hover {
+    transform: scale(1.2);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav,
+    a {
+        display: none;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .testimonial-carousel {
+        flex-direction: column;
+        overflow-x: visible;
+    }
+
+    .faq-item {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .btn,
+    .btn-cta {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .services {
+        margin-top: 60px;
+    }
+}
+
+/* Imagens Responsivas */
+
+
+/* Melhorar experiência do usuário */
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.testimonial-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ajustar texto para pequenos dispositivos */
+@media (max-width: 480px) {
+    .pulsating-text {
+        font-size: 2.5rem;
+    }
+
+    .slogan {
+        font-size: 1.2rem;
+    }
+
+    .services h2,
+    .faq h2,
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .services {
+        margin-top: 120px;
+    }
+
+    .hero-content h1 {
+        display: none;
+    }
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #25d366;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        animation: pulse 1.5s infinite;
+        transition: transform 0.3s;
+        z-index: 1000;
+    }
+}
