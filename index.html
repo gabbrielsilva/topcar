@@ -7,6 +7,13 @@
     <title>Oficina Automotiva</title>
     <link rel="stylesheet" href="/style.css">
 
+    <!-- Open Graph Meta Tags (para compartilhar em redes sociais) -->
+    <meta property="og:title" content="Oficina Automotiva | TOPCAR Ilha do Governador">
+    <meta property="og:description"
+        content="Oficina TOPCAR oferece serviços de alta qualidade para seu veículo, como lanternagem, pintura, vitrificação e muito mais.">
+    <meta property="og:image" content="URL_DA_IMAGEM">
+    <meta property="og:url" content="URL_DO_SITE">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
@@ -28,11 +35,13 @@
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="btn">Agendar Serviço</a>
+
+            <a href=" https://wa.me/5521964870999?text=Olá, gostaria de mais informações sobre os serviços." class="btn"
+                target="_blank">Agendar Serviço </a>
         </div>
     </header>
 
-    <section class="img-background">
+    <section class="img-background" id="home">
         <div class="hero">
             <div class="hero-content">
                 <!-- Texto principal -->
@@ -47,7 +56,7 @@
                 <!-- Diferenciais da oficina -->
                 <div class="differentials">
                     <div class="differential">
-                        <h3>+10 Anos de Experiência</h3>
+                        <h3>+30 Anos de Experiência</h3>
                         <p>Expertise comprovada no cuidado com veículos.</p>
                     </div>
                     <div class="differential">
@@ -121,9 +130,11 @@
                     <p>"A melhor oficina da região! Produtos de qualidade e garantia nos serviços."</p>
                     <h4>- Ana Paula Santos</h4>
                 </div>
+                
             </div>
         </div>
     </section>
+
 
     <!-- FAQ -->
     <section id="faq" class="faq">
@@ -180,7 +191,7 @@
 
         <div class="contact-details">
             <p><strong>Telefone:</strong> (21) 96487-0999</p>
-            <p><strong>Email:</strong> contato@oficinapro.com</p>
+            <p><strong>Email:</strong> allanalonsotopcar@gmail.com</p>
         </div>
 
         <div class="map-container">
@@ -192,8 +203,8 @@
             </iframe>
         </div>
     </section>
-    <a href="https://wa.me/SEUNUMERO?text=Olá, gostaria de mais informações sobre os serviços." class="whatsapp-button"
-        target="_blank">
+    <a href=" https://wa.me/5521964870999?text=Olá, gostaria de mais informações sobre os serviços."
+        class="whatsapp-button" target="_blank">
         <img src="/images/whatsapp-icon.png" alt="WhatsApp">
     </a>
     <footer>
@@ -211,61 +222,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <script>
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-            const carousel = document.querySelector('.testimonial-carousel');
-            let scrollAmount = 0;
-            const autoScroll = setInterval(() => {
-                scrollAmount += 300;
-                if (scrollAmount >= carousel.scrollWidth - carousel.offsetWidth) {
-                    scrollAmount = 0;
-                }
-                carousel.scrollTo({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            }, 3000);
-        });
-
-
-        const textArray = ['qualidade', 'rapidez', 'confiança'];
-        let index = 0;
-        const dynamicText = document.getElementById('dynamic-text');
-
-        setInterval(() => {
-            dynamicText.textContent = textArray[index];
-            index = (index + 1) % textArray.length;
-        }, 2000);
-
-
-        const swiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            loop: true,
-        });
-        // Initialize carousel to show the first item
-        changeCarousel();
-
-        // Set an interval to change items every 3 seconds
-        setInterval(changeCarousel, 3000);
-
-        function changeCarousel() {
-            // Remove a classe active de todos os itens
-            items.forEach(item => item.classList.remove('active'));
-
-            // Adiciona a classe active ao item atual
-            items[currentIndex].classList.add('active');
-
-            // Atualiza o índice para o próximo item
-            currentIndex = (currentIndex + 1) % totalItems;
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
