@@ -552,14 +552,18 @@ header .container {
 .testimonial-carousel {
     display: flex;
     gap: 20px;
-    overflow-x: auto;  /* Permite o scroll horizontal */
-    scroll-snap-type: x mandatory;  /* Ajuda na rolagem suave */
+    overflow-x: auto;
+    /* Permite o scroll horizontal */
+    scroll-snap-type: x mandatory;
+    /* Ajuda na rolagem suave */
     padding: 10px;
-    scroll-behavior: smooth;  /* Torna o scroll mais suave */
+    scroll-behavior: smooth;
+    /* Torna o scroll mais suave */
 }
 
 .testimonial {
-    scroll-snap-align: start;  /* Faz os itens "pararem" ao final do scroll */
+    scroll-snap-align: start;
+    /* Faz os itens "pararem" ao final do scroll */
     background: #222;
     color: #fff;
     padding: 20px;
@@ -585,11 +589,13 @@ header .container {
 }
 
 .testimonial-carousel::-webkit-scrollbar {
-    height: 10px; /* Espessura da barra de rolagem */
+    height: 10px;
+    /* Espessura da barra de rolagem */
 }
 
 .testimonial-carousel::-webkit-scrollbar-thumb {
-    background-color: #888; /* Cor da "bolinha" da barra */
+    background-color: #888;
+    /* Cor da "bolinha" da barra */
     border-radius: 5px;
 }
 
@@ -1025,4 +1031,11 @@ footer {
         transition: transform 0.3s;
         z-index: 1000;
     }
+
+    .differentials  {
+        margin-top: 10rem;
+
+    }
+
+
 }
